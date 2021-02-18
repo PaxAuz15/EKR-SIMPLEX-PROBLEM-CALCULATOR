@@ -9,7 +9,7 @@ except ImportError:
     pandas_av = False
     pass
 
-product_names = []
+etiqueta_ecuaciones = []
 col_values = []
 z_equation = []
 final_rows = []
@@ -149,7 +149,7 @@ what type of problem do you want to solve?
     const_names = [x + str(i) for i in range(1, const_num + 1)]
     for i in range(1, prod_nums + 1):
         prod_val = input("enter constrain {} name: >".format(i))
-        product_names.append(prod_val)
+        etiqueta_ecuaciones.append(prod_val)
     print("__________________________________________________")
     if prob_type == 1:
         for i in const_names:
@@ -164,7 +164,7 @@ what type of problem do you want to solve?
         while len(z_equation) <= (const_num + prod_nums):
             z_equation.append(0)
         print("__________________________________________________")
-        for prod in product_names:
+        for prod in etiqueta_ecuaciones:
             for const in const_names:
                 try:
                     val = float(Fraction(input("enter the value of %s in %s: >" % (const, prod))))
@@ -203,7 +203,7 @@ what type of problem do you want to solve?
         while len(z_equation) <= (const_num + prod_nums):
             z_equation.append(0)
         print("__________________________________________________")
-        for prod in product_names:
+        for prod in etiqueta_ecuaciones:
             for const in const_names:
                 try:
                     val = float(Fraction(input("enter the value of %s in %s: >" % (const, prod))))
